@@ -1,4 +1,4 @@
-import Welcome from "./Welcome";
+import Login,{Profile,Setting} from "./Usercomponent";
 
 
 function App()
@@ -6,7 +6,9 @@ function App()
   return(
     <>
     <h1>hello,i learn react js</h1>
-    <Welcome/>
+    <Login/>
+    <Profile/>
+    <Setting/>
     </>
   )
 }
