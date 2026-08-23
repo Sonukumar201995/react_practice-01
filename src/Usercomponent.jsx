@@ -25,4 +25,17 @@ export function Setting()
     )
 }
 
+
+export const keywork="sonu kumar";
+
+
+
+export function add(a,b)
+{
+    return a+b;
+}
+let res=add(10,20);
+console.log(res);
+
+
 export default Login;

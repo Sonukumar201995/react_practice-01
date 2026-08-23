@@ -1,4 +1,4 @@
-import Login,{Profile,Setting} from "./Usercomponent";
+import Login,{add, keywork, Profile,Setting} from "./Usercomponent";
 
 
 function App()
@@ -9,6 +9,8 @@ function App()
     <Login/>
     <Profile/>
     <Setting/>
+    <h5>{keywork}</h5>
+    <h5>{add(10,20)}</h5>
     </>
   )
 }
