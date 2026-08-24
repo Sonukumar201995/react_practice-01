@@ -1,16 +1,14 @@
-import Login,{add, keywork, Profile,Setting} from "./Usercomponent";
 
+let name="sonu kumar";
+let age=31;
 
 function App()
 {
   return(
     <>
     <h1>hello,i learn react js</h1>
-    <Login/>
-    <Profile/>
-    <Setting/>
-    <h5>{keywork}</h5>
-    <h5>{add(10,20)}</h5>
+    <p>Name : {name}</p>
+    <p>Age : {age}</p>
     </>
   )
 }
