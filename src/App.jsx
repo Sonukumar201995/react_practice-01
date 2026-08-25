@@ -1,21 +1,20 @@
+import { useState } from "react";
+import Counter from "./Couter";
 
 function App()
 { 
-  function handleClick()
-  {
-    console.log("Button Click")
-  }
-
-
-  let fruit=(name)=>{
-    console.log(name);
+ 
+  const [fruit,setFruit]=useState("Apple");
+  
+  const handleFruit=()=>{
+    setFruit("Banana")
   }
   return(
     <>
-    <h1>hello,i learn react js</h1>
-    
-    <button onClick={handleClick}>Click</button>
-    <button onClick={()=>fruit("apple")}>Click Me!</button>
+    <h1>hello,i learn State in Reactjs</h1>
+    <p>{fruit}</p>
+    <button onClick={handleFruit}>change</button>
+    <Counter/>
     </>
   )
 }
