@@ -3,13 +3,15 @@ import User from "./User";
 function App()
 { 
 
-  let userName="sonu kumar"
-  let userAge=31;
-  let userEmail="sonu@gmail.com"
+  let userObjet={
+    name:"sonu kumar",
+    age:31,
+    email:"sonu@gmail.com"
+  }
   return(
     <>
       <h1>props, in React js</h1>
-      <User name={userName} age={userAge} email={userEmail}/>
+      <User user={userObjet}/>
     </>
   )
 }
