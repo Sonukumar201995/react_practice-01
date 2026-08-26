@@ -1,11 +1,11 @@
 
-function User({user}){
+function User({name}){
    
     return(
         <>
-        <h2>Name :{user.name}</h2>
-        <h2>Age : {user.age}</h2>
-        <h2>Email :{user.email}</h2>
+        <h2>{name[0]}</h2>
+        <h2>{name[1]}</h2>
+        <h2>{name[2]}</h2>
         </>
     )
 }
