@@ -1,13 +1,15 @@
+import { useState } from "react";
 import User from "./User";
 
 function App()
 { 
 
-  let collage=["ignou","du","iit"];
+  const [student,setStudent]=useState("sonu")
   return(
     <>
       <h1>props, in React js</h1>
-      <User name={collage}/>
+     { student && <User name={student}/>}
+     <button onClick={()=>setStudent("bhaskar")}>update student</button>
     </>
   )
 }
