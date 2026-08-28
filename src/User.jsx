@@ -1,9 +1,10 @@
 
-function User({name}){
+function User({name="name not found"}){
    
     return(
         <>
-        <h2>{name}</h2>
+        <h2>Hi, {name}</h2>
+
         </>
     )
 }
