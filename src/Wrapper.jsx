@@ -1,10 +1,11 @@
-function Wrapper({children,color}){
-    return(
-        <>
-        <div style={{color:color}}>wrapper component</div>
-        :{children}
-        </>
-    )
+function Wrapper({ children, color }) {
+  return (
+    <>
+      <div style={{ color: color }}>
+        {children}
+      </div>
+    </>
+  );
 }
 
 export default Wrapper;
