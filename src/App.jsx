@@ -1,30 +1,52 @@
-import { useState } from "react";
-import Skill from "./Skills";
+function App() {
+  const userData = [
+    {
+      id: 1,
+      name: "sonu",
+      email: "sonu@gmail.com",
+      age: 31
+    },
+    {
+      id: 2,
+      name: "monu",
+      email: "monu@gmail.com",
+      age: 30
+    },
+    {
+      id:3,
+      name:"arun",
+      email:"arun@gmail.com",
+      age:30
+    }
+  ];
 
-function App()
-{
-  const [gender,setGender]=useState('Male')
-  const [city,setCity]=useState("delhi")
-  return(
+  return (
     <>
-    <h1>Handle Radio and DropDown </h1>
+      <table border="1">
+        <thead>
+          <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>email</td>
+            <td>age</td>
+          </tr>
+        </thead>
 
-    <h2>Selected Gender :{gender}</h2>
-     <input type="radio" onChange={(e)=>setGender(e.target.value)} name="gender" value={"male"}
-     checked={gender=='male'} id="male"/>
-     <label htmlFor="male">male</label> 
-
-     <input type="radio" onChange={(e)=>setGender(e.target.value)} name="gender" value={"female"}
-     checked={gender=='female'} id="female"/>
-     <label htmlFor="female">female</label>
-
-     <h4>Selected City :{city}</h4>
-     <select onChange={(e)=>setCity(e.target.value)} defaultValue={'delhi'}>
-        <option value="noida">Noida</option>
-        <option value="gurugram">Gurugram</option>
-        <option value="delhi">Delhi</option>
-     </select>
+        <tbody>
+          {userData.map((user) => {
+            return (
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>{user.age}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </>
-  )
+  );
 }
+
 export default App;
