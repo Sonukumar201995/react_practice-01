@@ -1,3 +1,5 @@
+import User from "./User";
+
 function App() {
   const userData = [
     {
@@ -13,38 +15,20 @@ function App() {
       age: 30
     },
     {
-      id:3,
-      name:"arun",
-      email:"arun@gmail.com",
-      age:30
+      id: 3,
+      name: "arun",
+      email: "arun@gmail.com",
+      age: 30
     }
   ];
 
   return (
     <>
-      <table border="1">
-        <thead>
-          <tr>
-            <td>id</td>
-            <td>name</td>
-            <td>email</td>
-            <td>age</td>
-          </tr>
-        </thead>
+      <h2>Reuse component in loop</h2>
 
-        <tbody>
-          {userData.map((user) => {
-            return (
-              <tr key={user.id}>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.age}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      {userData.map((user) => {
+        return <User key={user.id} data={user} />;
+      })}
     </>
   );
 }
