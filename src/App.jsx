@@ -1,61 +1,11 @@
-import Student from "./Student";
+import { useEffect } from "react";
 
 function App() {
-  const collegeData = [
-    {
-      college: "Ignou",
-      website: "ignou@gmail.com",
-      city: "New Delhi",
-      student: [
-        {
-          name: "Sonu"
-        },
-        {
-          name: "Shekhar"
-        }
-      ]
-    },
+  useEffect(() => {
+    console.log("Effect is running");
+  });
 
-    {
-      college: "DU",
-      website: "du@gmail.com",
-      city: "New Delhi",
-      student: [
-        {
-          name: "Arun"
-        },
-        {
-          name: "Deepak"
-        }
-      ]
-    },
-
-    {
-      college: "JNU",
-      website: "jnu@gmail.com",
-      city: "New Delhi",
-      student: [
-        {
-          name: "Pooja"
-        },
-        {
-          name: "Jyoti"
-        }
-      ]
-    }
-  ];
-
-  return (
-    <>
-      <h2>Nested Loop</h2>
-
-      {collegeData.map((college, index) => (
-        <div key={index}>
-          <Student college={college} />
-        </div>
-      ))}
-    </>
-  );
+  return <h1>Hello</h1>;
 }
 
 export default App;
