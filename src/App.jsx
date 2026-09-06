@@ -1,28 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Counter from "./Counter";
 
-function App() {
+function App(){
 
-  const [data,setData]=useState(0);
-  const [counter,setCounter]=useState(0);
-
-
-  useEffect(() => {
-    hello();
-  },[counter,data]);
-
-
- 
-  function hello(){
-    console.log("hello is calling")
-  }
-
+  const [count,setCount]=useState(0);
   return(
     <>
-    <h2>useEffect Hooks</h2>
-        <button onClick={()=>setCounter(counter+1)}>counter {counter}</button>
-        <button onClick={()=>setData(data+1)}>data {data}</button>
+      <h1>handle props side effect</h1>
+      <Counter count={count}/>
+      <button onClick={()=>setCount(count+1)}>counter</button>
     </>
-  ) 
+  )
 }
 
 export default App;
