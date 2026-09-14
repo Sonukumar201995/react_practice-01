@@ -1,14 +1,8 @@
-import { useState } from "react";
-import Counter from "./Counter";
-
-function App(){
-
-  const [count,setCount]=useState(0);
+function App()
+{
   return(
     <>
-      <h1>handle props side effect</h1>
-      <Counter count={count}/>
-      <button onClick={()=>setCount(count+1)}>counter</button>
+    <h1 style={{color:"red",backgroundColor:"pink"}}>inline css style in react js</h1>
     </>
   )
 }
