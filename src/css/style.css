@@ -1,11 +1,3 @@
-.heading{
-    color: green;
-}
-
-.image{
-    width: 200px;
-}
-.container
-{
-    display: flex;
+h3{
+    color: red;
 }
