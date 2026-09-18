@@ -1,13 +1,13 @@
-import UserProfile from "./UserProfile";
+import UserProfile from "./userProfile";
+// import './css/style.css'
 
-
-function App() {
-  return (
+function App()
+{
+  return(
     <>
-      <h2>Style with CSS Module</h2>
-      <UserProfile />
+      <h1 className="heading">style with css modules</h1>
+      <UserProfile/>
     </>
-  );
+  )
 }
-
 export default App;

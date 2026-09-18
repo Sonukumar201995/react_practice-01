@@ -1,16 +1,7 @@
-.container {
-  text-align: center;
+.heading{
+  color: red;
 }
 
-.image {
-  width: 200px;
-  border-radius: 50%;
-}
-
-h4{
-    color: red;
-}
-p{
-
-    color: green;
+.image{
+  width: 100px;
 }
