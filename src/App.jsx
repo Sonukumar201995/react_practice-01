@@ -1,22 +1,26 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router";
+import {Routes,Route,Link} from 'react-router';
+import Home from './Home';
+import { About } from './About';
+import { Login } from './Login';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <h2>Router in React</h2>
+function App()
+{
+  return(
+    <div>
+      <h2>Basic pages with React-Router</h2>
 
-     
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      
+
+      <Link to='/'>Home</Link>
+      <Link to='/about'>About</Link>
+      <Link to='/login'>Login</Link>
 
       <Routes>
-        <Route path="/" element={<h2>Home</h2>} />
-        <Route path="/about" element={<h2>About</h2>} />
-        <Route path="/contact" element={<h2>Contact</h2>} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
-    </BrowserRouter>
-  );
+    </div>
+  )
 }
+
 export default App;
