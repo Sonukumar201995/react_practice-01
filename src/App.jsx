@@ -1,15 +1,22 @@
-import styled from "styled-components";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
 
-function App()
-{
+function App() {
+  return (
+    <BrowserRouter>
+      <h2>Router in React</h2>
 
-  const Heading=styled.h1`
-  color:red`;
-  return(
-    <>
-      <h1 className="heading">style with css modules</h1>
-      <Heading>hello world</Heading>
-       </> 
-  )
+     
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      
+
+      <Routes>
+        <Route path="/" element={<h2>Home</h2>} />
+        <Route path="/about" element={<h2>About</h2>} />
+        <Route path="/contact" element={<h2>Contact</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 export default App;
